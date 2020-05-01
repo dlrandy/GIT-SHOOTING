@@ -1,0 +1,18 @@
+1. git amend
+ > 它是将已暂存的和最近的commit进行合并
+ -  如何修改本地还没push到远端的commit 信息？
+  ``` bash
+  git commit --amend -m 'good good study git'
+  ```
+ - 这个操作会改变commitId吗？为什么？有什么影响？
+  > 会的，因为它使用新的commit完全的替换了当前的commit。
+  注意已经给他人使用的时候，就不要使用了
+ - 如果不想修改commit信息可以使用
+  ``` bash
+  git commit --amend --no-edit
+  ```
+ 
+2.对于以前commit的message信息的修改，
+可以使用git rebase -i
+ 
+ 

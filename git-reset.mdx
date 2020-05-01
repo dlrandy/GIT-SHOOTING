@@ -1,0 +1,9 @@
+1. hard mixed soft的区别
+ - hard会清除commit以后的所有改动
+ - mixed 是将所有的改动退到工作区
+ - soft是将所有的改动退到暂存区
+2. 如果错误的使用了reset hard，怎么恢复
+``` bash
+git reflog
+git reset --hard commit_id
+```

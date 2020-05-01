@@ -1,0 +1,10 @@
+1. 如果一个文件已经被提交了，但是
+现在放在了ignore里，如何删除这个文件呢？
+``` bash
+ git rm -rf --cached .file
+```
+要注意的是历史记录上仍然会看到
+2. 那么如何将文件全部移除呢，包括提交的历史？
+使用https://github.com/rtyley/bfg-repo-cleaner
+
+
