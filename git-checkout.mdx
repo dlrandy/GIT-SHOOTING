@@ -1,3 +1,19 @@
 返回上一次checkout的分支
+
+``` bash
 git checkout - 
+
+
+```
+对于在分支上的操作，它是把HEAD的ref指针指向特殊的commit
+
+branch是commit的一个引用
+
+如果不小心删除了为合并的分支，只要找到之前的commit_id,就能恢复
+``` bash
+git log -g // 找回可能删掉了运用的commit_id
+//根据commit创建分支
+git branch recover_name commit_id
+```
+chekcout和reset多用于private的撤销，revert用于public的撤销
 
