@@ -1,12 +1,15 @@
-1. hard mixed soft的区别
- - hard会清除commit以后的所有改动
- - mixed 是将所有的改动退到工作区
- - soft是将所有的改动退到暂存区
+1. hard mixed soft的区别（这些只会影响commit级别，文件级别没什么效果）
+ - hard会清除工作区和暂存区的改动
+ - mixed 是将暂存区的改动重置到commit的状态，工作区的不变
+ - soft是对于暂存区和工作去的改动都不处理
 2. 如果错误的使用了reset hard，怎么恢复
 ``` bash
 git reflog
 git reset --hard commit_id
 
 git reset HEAD~1
+
+git reset HEAD~2 foo.py
+
 
 ```
