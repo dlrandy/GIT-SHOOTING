@@ -15,3 +15,30 @@ git log master..feature查看它俩分支之间的commit
 git log file查看某个文件的改动
 
 git log origin/master..拿master和当前分支作比较
+
+git log --format=fuller
+会显示出
+Author:     chenziyu <1208484996@qq.com>
+AuthorDate: Fri May 8 18:30:11 2020 +0800
+Commit:     GitHub <noreply@github.com>
+CommitDate: Fri May 8 18:30:11 2020 +0800
+大部分时候，Author和AuthorDate与commit和CommitDate是一样的；
+不一样的时候在于切换新分支或者使用cherry-pick的时候
+
+git log --format=raw
+commit 63ad44807a37bfe05ee49bbc38c1abda476932f9
+tree 428705ec065aa0af0c5b2cf1d705faf1a4a5f18a
+parent 2469157023e6d922c558b2fe45b466a90decc7fb
+author dlrandy <1208484996@qq.com> 1589208135 +0800
+committer dlrandy <1208484996@qq.com> 1589208135 +0800
+  git diff 和移除暂存区的方法
+
+--graph是给commit加一个星，但是在有更多分支的时候，会给出一个
+仓库的图形描述
+--decorate打印出commit的label(分支名)
+
+
+
+git
+
+

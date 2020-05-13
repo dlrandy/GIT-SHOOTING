@@ -4,3 +4,20 @@ git config --global core.editor vim
 
 git config --global alias.graph 'log --graph --oneline'
 git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --branches"
+
+git配置变量的三种级别
+1. repository --local
+2. user --global
+3. system --system
+
+修改提交人信息
+``` bash
+git config user.name 'jjda'
+git commit --amend --reset-author
+
+```
+
+
+
+
+
