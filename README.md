@@ -69,8 +69,14 @@ git commit 是根据暂存区的内容创建commit，并清空暂存区
 git的三个区
 工作目录 staging区域 HEAD Commit
 
+fast  forward 
+是指一个commit1在另一个commit2之上，但是commit2
+却执行了merge commit1，且没有冲突，不会产生merge commit，
+只是将commit2移动到了commit1
+如果非要生成merge commit，请使用--no-ff
 
-hhh
+
+
 
 
 
