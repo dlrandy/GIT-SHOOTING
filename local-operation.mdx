@@ -1,0 +1,84 @@
+``` shell
+mkdir grocery
+
+cd grocery
+
+# 创建 .git目录
+git init 
+
+echo "My shopping list repository" > README.md
+
+echo "banana" > shoppingList.txt
+
+git add .
+
+#local repository settings
+git config --local user.name "格莱普尼尔"
+git config user.email xxxoo@gmail.com
+
+git commit --amend --reset-author
+
+git log
+
+#SHA-1是40位的字母数字序列，代表着十六进制的数，唯一标志着commit
+#author是执行commit的人
+
+#author VS Commit(注意开头字母)
+# 这两个值一般是相同的，但是如果使用了cherry-pick的
+#话 Commit就指向了另外的人了
+
+
+#查看更多信息
+git log --format=fuller
+
+git log --format=raw
+
+#git cat-file -p [git object]
+
+git cat-file -p f38b0b50199af550c511690bd6cb9e8f2b1231f6 # tree
+
+git cat-file -p 0c7c893eae59c366289e531b6c0368ef46ecd418 # blob
+
+cat file_name
+
+
+echo "xxoo" | git hash-object --stdin
+
+ls -al .git
+
+ls -al ./git/objects
+
+echo "apple" >> shoppingList.txt
+
+git add shoppingList.txt
+
+git commit -m "Add an apple"
+
+git log --oneline
+
+git log --oneline --graph --decorate
+
+echo "orange" >> shoppingList.txt
+
+ git commit -am "Add an orange"
+
+ ls -al .git/refs
+ ls -al .git/refs/heads
+ ls -al .git/refs/heads/dev #commit
+
+git branch berries # 此时.git目录里发生了那些变化？
+
+git log --oneline --graph --decorate
+
+
+
+
+
+
+
+
+
+
+
+
+```
