@@ -1,0 +1,37 @@
+1. hard mixed soft的区别（这些只会影响commit级别，文件级别没什么效果）
+ - hard会清除工作区和暂存区的改动
+ - mixed 是将暂存区的改动重置到commit的状态，工作区的不变
+ 就是覆盖commit区和stage area
+ - soft是对于暂存区和工作去的改动都不处理，只覆盖commit区
+2. 如果错误的使用了reset hard，怎么恢复
+``` bash
+git reflog
+git reset --hard commit_id
+
+git reset HEAD~1
+
+git reset HEAD~2 foo.py
+
+
+```
+git reset的副作用是会失去之前的commit，使得这些commit
+变得不可访问---没有分支直接引用它，或者没有座位分支上其他commit的
+父亲
+
+git reset HEAD file_name == git reset -- file_name
+
+git checkout 覆盖所有的tree areas
+
+git checkout feature分支的时候，发生了什么？
+git会拿到feature分支的顶端commit，分析他，然后重构建该commit
+描述的快照到工作区，拷贝所有的文件到暂存区和工作区
+
+
+
+
+
+
+
+
+
+

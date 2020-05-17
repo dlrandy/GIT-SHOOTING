@@ -1,0 +1,12 @@
+``` bash
+git  revert HEAD
+
+//例如我们把feature分支合并到develop分支，
+//也就是在develop分支上执行了Git merge feature
+// 1表示保留develop的code
+git revert -m 1 commit_id
+```
+
+https://mijingo.com/blog/reverting-a-git-merge
+
+https://www.atlassian.com/git/tutorials/undoing-changes/git-revert

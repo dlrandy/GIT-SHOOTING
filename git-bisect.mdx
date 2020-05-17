@@ -1,0 +1,14 @@
+检测一个隐藏了很久bug的时候使用
+有助于找到是哪个commit引入的bug。它是基于二分查找的
+good或者bad
+``` bash
+  git bisect start
+  npm test
+  git bisect bad
+  git log --oneline
+  git biect good 111111
+  git bisect reset
+```
+
+
+
