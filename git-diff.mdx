@@ -1,7 +1,10 @@
-默认它比较的是上一次的commit和当前工作区的不同
+git diff 比较的是工作区和暂存区的区别
 
---cached比较的是staging area和当前工作区的不同
-git diff HEAD 比较的是当前的工作区及暂存区和上一次commit的不同
+git diff HEAD 比较的是工作区和当前Commit的区别
+
+git diff --cached/--staged比较的是暂存区和当前commit的区别
+
+
 和另一个分支的文件进行比较
 git diff origin/master git-amend.mdx
 
