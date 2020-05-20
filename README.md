@@ -86,7 +86,7 @@ git的三个区
 fast  forward 
 是指一个commit1在另一个commit2之上，但是commit2
 却执行了merge commit1，且没有冲突，不会产生merge commit，
-只是将commit2移动到了commit1
+只是将commit2移动到了commit1;一般git pull origin master操作就会产生
 如果非要生成merge commit，请使用--no-ff
 
 
@@ -99,6 +99,24 @@ git tag -a taggg commit_id
 git diff 默认比较的是工作区和暂存区的
 git diff HEAD 比较的是工作区和当前的commit
 git diff --staged/cached 比较的是暂存区和comit
+
+origin 是远程的默认名字
+
+
+fork一个项目有什么好处？
+修改已有的项目满足自己的需要，同时还能获取到原项目的新特性和bug修复
+具体的操作是什么？
+1. git remote -v
+2. git remote add upstream original_prj_url
+3. git remote -v
+4. git pull upstream master
+5. git push -u origin master
+
+
+git 的配置三种级别
+1. 系统级 ls /usr/local/etc/gitconfig 也就是win的Programfiles下的
+2.用户级 用户根目录下的.gitconfig
+3.仓库级 repository/.git/config
 
 
 
